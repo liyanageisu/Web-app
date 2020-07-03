@@ -10,7 +10,7 @@ export class AuthService {
   notifications: Observable<AdminNotifications[]>
 
   constructor(public afs: AngularFirestore) { 
-    this.notifications = this.afs.collection('notifications').valueChanges();
+    this.notifications = this.afs.collection('AdminNotifications').valueChanges();
 
   }
 

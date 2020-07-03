@@ -1,22 +1,25 @@
 import { Component, OnInit } from "@angular/core";
 //import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/auth.service';
+import { AdminNotifications } from 'src/app/components/models/notifications';
 
 @Component({
   selector: "app-notifications",
   templateUrl: "notifications.component.html"
+  
 })
 export class NotificationsComponent implements OnInit {
-  staticAlertClosed  = false;
-  staticAlertClosed1 = false;
-  staticAlertClosed2 = false;
-  staticAlertClosed3 = false;
-  staticAlertClosed4 = false;
-  staticAlertClosed5 = false;
-  staticAlertClosed6 = false;
-  staticAlertClosed7 = false;
+  // staticAlertClosed  = false;
+  // staticAlertClosed1 = false;
+  // staticAlertClosed2 = false;
+  // staticAlertClosed3 = false;
+  // staticAlertClosed4 = false;
+  // staticAlertClosed5 = false;
+  // staticAlertClosed6 = false;
+  // staticAlertClosed7 = false;
 
  // constructor(private toastr: ToastrService) {}
+ notifications: AdminNotifications[];
   constructor(private notService: AuthService){
 
 
@@ -77,7 +80,10 @@ export class NotificationsComponent implements OnInit {
   // }
 
   ngOnInit() {
-this.notService.getNotifications().subscribe(notifications => {
-  console.log(notifications);
-})  }
+    //console.log("ng");
+  this.notService.getNotifications().subscribe(notifications => {
+ // console.log(notifications);
+  this.notifications = notifications;
+  });
+}
 }
