@@ -73,7 +73,7 @@
     "@angular/router": "10.0.2",
     "@ng-bootstrap/ng-bootstrap": "6.1.0",
     "angularfire2": "^5.4.2",
-    "chart.js": "2.9.3",
+    "chart.js": "2.9.4",
     "core-js": "3.6.5",
     "firebase": "^7.15.5",
     "ngx-toastr": "12.1.0",
